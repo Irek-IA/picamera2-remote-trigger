@@ -19,7 +19,7 @@ class CameraControlApp(QWidget):
 
     def send_capture_command(self):
         client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        client_socket.connect(('192.168.0.18', 12345))
+        client_socket.connect(('YOURIP', 12345))
         client_socket.send("capture".encode('utf-8'))
         client_socket.close()
 
